@@ -2,6 +2,7 @@ import Head from 'next/head'
 import Image from 'next/image'
 import { Inter } from '@next/font/google'
 import styles from '@/styles/Home.module.css'
+import variables from '@/styles/variables.module.scss'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -58,6 +59,13 @@ export default function Home() {
             />
           </div>
         </div>
+
+        <div className='icon-text'>Hello World!</div>
+        <div className="notification is-primary">
+  <button className="delete"></button>
+  Primar lorem ipsum dolor sit amet, consectetur
+  adipiscing elit lorem ipsum dolor. <strong>Pellentesque risus mi</strong>, tempus quis placerat ut, porta nec nulla. Vestibulum rhoncus ac ex sit amet fringilla. Nullam gravida purus diam, et dictum <a>felis venenatis</a> efficitur.
+</div>
 
         <div className={styles.grid}>
           <a
