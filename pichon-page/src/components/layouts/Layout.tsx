@@ -34,14 +34,15 @@ export const Layout: FC<LayoutProps> = ({ children, title }) => {
         {/* <meta property="og:image" content={`${origin}/img/banner.png`} /> */}
       </Head>
       <Navbar />
-      <label className="checkbox">
+      <div className="field">
         <input
           type="checkbox"
           defaultChecked={dark}
           onChange={() => setDark(!dark)}
         />
-        Theme {dark}
-      </label>
+        <label>Theme {dark}</label>
+      </div>
+
       <main>{children}</main>
     </div>
   );
