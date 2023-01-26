@@ -109,6 +109,11 @@
   position: relative;
 }
 
+.logo,
+.thirteen img {
+  filter: var(--img-filter) drop-shadow(0 0 0.3rem #ffffff70);
+}
+
 .thirteen {
   display: flex;
   justify-content: center;
@@ -257,15 +262,13 @@
   }
 }
 
-@media (prefers-color-scheme: dark) {
-  .vercelLogo {
-    filter: invert(1);
-  }
+.vercelLogo {
+  filter: var(--vercel-logo-filter);
+}
 
-  .logo,
-  .thirteen img {
-    filter: invert(1) drop-shadow(0 0 0.3rem #ffffff70);
-  }
+.logo,
+.thirteen img {
+  filter: var(--thirteen-logo-filter);
 }
 
 @keyframes rotate {
