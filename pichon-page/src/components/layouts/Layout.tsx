@@ -12,7 +12,7 @@ interface LayoutProps {
 export const Layout: FC<LayoutProps> = ({ children, title }) => {
 
   return (
-    <div className="container is-fluid">
+    <>
       <Head>
         <title>{title || "PC Studio"}</title>
         <meta name="author" content="Pichones Corp" />
@@ -26,8 +26,13 @@ export const Layout: FC<LayoutProps> = ({ children, title }) => {
         />
         {/* <meta property="og:image" content={`${origin}/img/banner.png`} /> */}
       </Head>
-      <Navbar />
-      <main>{children}</main>
-    </div>
+      <div className="sidebar">
+        <Navbar />
+      </div>
+      <div className="content">
+        <main className="container">{children}</main>
+      </div>
+      <div className="mobile-menu">menus mobile</div>
+    </>
   );
 };

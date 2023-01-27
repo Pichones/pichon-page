@@ -1,0 +1,28 @@
+.sidebar{
+    width: $sidebar-width;
+    height: 100vh;
+    position: absolute;
+    border: solid 1px black;
+    @include mobile {
+        width: 0;
+        display: none;
+    }
+}
+.mobile-menu{
+    display: none;
+    @include mobile {
+        display: block;
+        position: fixed;
+        bottom: 0;
+        width: 100%;
+        border: solid 1px black;
+    }
+}
+.content {
+    width: auto;
+    margin-left: $sidebar-width;
+    @include mobile {
+        width: 100%;
+        margin-left: 0;
+    }
+}
