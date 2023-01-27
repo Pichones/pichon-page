@@ -24,3 +24,17 @@ $control-border-width: 2px;
 $input-border-color: transparent;
 $input-shadow: none;
 @import "bulma/bulma.sass";
+
+
+.embla {
+    overflow: hidden;
+}
+
+.embla__container {
+    display: flex;
+}
+
+.embla__slide {
+    flex: 0 0 100%;
+    min-width: 0;
+}
