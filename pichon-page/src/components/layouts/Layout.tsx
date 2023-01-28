@@ -1,7 +1,7 @@
 import { FC, useState } from "react";
 
 import Head from "next/head";
-import { Navbar } from "../ui/Navbar";
+import { Sidebar } from "../ui";
 
 interface LayoutProps {
   children: React.ReactNode;
@@ -27,7 +27,7 @@ export const Layout: FC<LayoutProps> = ({ children, title }) => {
         {/* <meta property="og:image" content={`${origin}/img/banner.png`} /> */}
       </Head>
       <div className="sidebar">
-        <Navbar />
+        <Sidebar />
       </div>
       <div className="content">
         <main className="container">{children}</main>
