@@ -1,0 +1,43 @@
+//side bar
+$sidebar-width: 18rem;
+$sidebar-padding: 1.25rem;
+$menu-item-active-color: $text-strong;
+$menu-item-hover-background-color: $white-bis;
+$menu-item-active-background-color: $white-bis;
+
+@import "bulma/sass/components/menu";
+
+.sidebar{
+    width: $sidebar-width;
+    height: 100vh;
+    position: absolute;
+    padding: $sidebar-padding;
+    @include mobile {
+        width: 0;
+        display: none;
+    }
+    .menu-list a.is-active{
+        font-weight: bold;
+    }
+    
+    &::after {
+        content: '';
+        position: absolute;
+        bottom: 3%;
+        top: 3%;
+        left: 0;
+        right: 0;
+        // box-shadow: rgba(33, 35, 38, 0.1) 10px 0px 10px -10px;
+        border-right: 1px solid $grey-lightest;
+    }
+}
+.mobile-menu{
+    display: none;
+    @include mobile {
+        display: block;
+        position: fixed;
+        bottom: 0;
+        width: 100%;
+        border: solid 1px black;
+    }
+}
